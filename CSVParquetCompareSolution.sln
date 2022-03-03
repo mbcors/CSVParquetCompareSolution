@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVParquetCompare", "CSVParquetCompare\CSVParquetCompare.csproj", "{963C61FC-6135-4AC6-8BC2-16888DCF81B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{963C61FC-6135-4AC6-8BC2-16888DCF81B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963C61FC-6135-4AC6-8BC2-16888DCF81B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963C61FC-6135-4AC6-8BC2-16888DCF81B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963C61FC-6135-4AC6-8BC2-16888DCF81B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8193BF44-B78C-41C4-970A-7A16AF3BD95E}
+	EndGlobalSection
+EndGlobal
