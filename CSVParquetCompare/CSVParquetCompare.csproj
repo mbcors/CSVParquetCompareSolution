@@ -2,8 +2,126 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\csv_parquet\csv\zonefiles_ch_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_ch_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_nu_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_nu_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_ru_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_ru_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_se_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_se_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_su_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_su_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_uk_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_uk_20220304.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_xn--p1ai_20220225.csv" />
+    <None Remove="Data\csv_parquet\csv\zonefiles_xn--p1ai_20220304.csv" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_ch_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_ch_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_nu_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_nu_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_ru_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_ru_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_se_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_se_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_su_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_su_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_uk_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_uk_20220304.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_xn--p1ai_20220225.parquet" />
+    <None Remove="Data\csv_parquet\parquet\zonefiles_xn--p1ai_20220304.parquet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\csv_parquet\csv\zonefiles_ch_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_ch_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_nu_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_nu_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_ru_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_ru_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_se_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_se_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_su_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_su_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_uk_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_uk_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_xn--p1ai_20220225.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\csv\zonefiles_xn--p1ai_20220304.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_ch_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_ch_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_nu_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_nu_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_ru_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_ru_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_se_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_se_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_su_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_su_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_uk_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_uk_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_xn--p1ai_20220225.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\csv_parquet\parquet\zonefiles_xn--p1ai_20220304.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
