@@ -9,7 +9,7 @@ using Parquet;
 
 namespace CSVParquetCompare
 {
-    public static class Comparer
+    public static class DataReader
     {
         public static List<string> CSVDataReader(string filename)
         {
