@@ -9,7 +9,8 @@ namespace CSVParquetCompare
     {
         static void Main(string[] args)
         {
-            Compare.CsvParquet();
+            Compare.CsvParquet("csv_parquet");
+            Compare.CsvParquet("csv_parquet_whoisXML");
         }
     }
 }

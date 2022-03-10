@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Parquet;
 
@@ -34,7 +30,7 @@ namespace CSVParquetCompare
                 var table = pr.ReadAsTable();
                 foreach (var row in table)
                 {
-                    var response = JsonConvert.DeserializeObject<ParquetResponse>(row.ToString());
+                    ParquetResponse response = JsonConvert.DeserializeObject<ParquetResponse>(row.ToString());
                     parquetList.Add(response.Domain);
                 }
             }
