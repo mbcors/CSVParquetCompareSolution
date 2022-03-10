@@ -13,6 +13,7 @@ namespace CSVParquetCompare
             List<string> csvFilesList = new List<string>(Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Data\\"+location+"\\csv"));
             List<string> parquetFilesList = new List<string>(Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Data\\"+ location+"\\parquet"));
             int nrOfEntries = 0;
+            int failCount = 0;
             if (csvFilesList.Count != parquetFilesList.Count)
             {
                 Console.WriteLine("Number of csv files (" + csvFilesList.Count + ") does not match the parquet files (" + parquetFilesList.Count + ")");
@@ -35,6 +36,7 @@ namespace CSVParquetCompare
                 }
                 catch (Exception e)
                 {
+                    failCount++;
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write("FAIL");
                     Console.ResetColor();
@@ -44,7 +46,9 @@ namespace CSVParquetCompare
                 }
             }
             Console.ResetColor();
-            Console.WriteLine("\nNumber of checked entries: "+nrOfEntries.ToString()+ " in "+ csvFilesList.Count + " file pairs\n");
+            Console.WriteLine("\nNumber of records checked: "+nrOfEntries.ToString()+ " in "+ csvFilesList.Count + " file pairs\n");
+            Console.WriteLine("PASSED: " + (csvFilesList.Count-failCount).ToString());
+            Console.WriteLine("FAILED: " + failCount.ToString());
             Console.ReadKey();
         
         }
