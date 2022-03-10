@@ -1,2 +1,2 @@
 ﻿Extract data.zip to this folder
-Folder structure should be \Data\whois_
+Folder structure should be \Data\{location_parameter}
