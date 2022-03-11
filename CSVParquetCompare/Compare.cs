@@ -31,7 +31,7 @@ namespace CSVParquetCompare
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.Write("PASS ");
                     Console.ResetColor();
-                    Console.WriteLine(( csvFile.Count + " entries - " + Path.GetFileName(csvFilesList[i])) + " & " + Path.GetFileName(parquetFilesList[i]));
+                    Console.WriteLine(( csvFile.Count + " records - " + Path.GetFileName(csvFilesList[i])) + " & " + Path.GetFileName(parquetFilesList[i]));
                     nrOfEntries+=csvFile.Count;
                 }
                 catch (Exception e)
