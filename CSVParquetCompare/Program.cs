@@ -13,8 +13,9 @@ namespace CSVParquetCompare
     /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Compare.CsvParquet("csv_parquet");
-            Compare.CsvParquet("csv_parquet_whoisXML");
+            //Compare.CsvParquet("Zonefiles");
+            //Compare.CsvParquet("WhoisXML");
+            Compare.CsvParquet("Domenius");
         }
     }
 }
