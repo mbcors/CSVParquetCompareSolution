@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text;
 using CsvHelper;
 using CsvHelper.Configuration;
@@ -11,18 +13,8 @@ namespace CSVParquetCompare
 {
     public static class DataReader
     {
-        public static List<string> CSVDataReader(string filename)
-        {
-            List<string> csvList = new List<string>();
-            using (var rd = new StreamReader(filename))
-            {
-                while (!rd.EndOfStream)
-                    csvList.Add(rd.ReadLine());
-            }
-            return csvList;
-        }
 
-        public static List<string> CSVDataReaderDomenius(string filename)
+        public static List<string> CSVDataReader(string filename)
         {
             var configuration = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -45,18 +37,46 @@ namespace CSVParquetCompare
             }
         }
 
-        public static List<string> CSVDataReaderDomenius2(string filename)
+        public static List<string> CSVDataReaderIcann(string filename)
         {
-            List<string> csvList = new List<string>();
-            MemoryStream csvData = new MemoryStream();
-            using (FileStream source = File.Open(filename, FileMode.Open))
-                source.CopyTo(csvData);
-            using (var rd = new StreamReader(filename))
+            List<string> uniqueList = new List<string>();
+            List<string> result = new List<string>();
+            DataTable datatable = new DataTable();
+            StreamReader streamreader = new StreamReader(@filename);
+            char[] delimiter = new char[] { '\t' };
+            //string[] columnheaders = streamreader.ReadLine().Split(delimiter);
+            string[] columnheaders = new string[5];
+            columnheaders[0] = "c0";
+            columnheaders[1] = "c1";
+            columnheaders[2] = "c2";
+            columnheaders[3] = "c3";
+            columnheaders[4] = "c4";
+            foreach (string columnheader in columnheaders)
             {
-                while (!rd.EndOfStream)
-                    csvList.Add(rd.ReadLine());
+                datatable.Columns.Add(columnheader); // I've added the column headers here.
             }
-            return csvList;
+
+            while (streamreader.Peek() > 0)
+            {
+                DataRow datarow = datatable.NewRow();
+                datarow.ItemArray = streamreader.ReadLine().Split(delimiter);
+                datatable.Rows.Add(datarow);
+            }
+
+            foreach (DataRow row in datatable.Rows)
+            {
+                foreach (DataColumn column in datatable.Columns)
+                {
+                    //check what columns you need
+                    if (column.ColumnName == "c0" )
+                    {
+                        result.Add(row[column].ToString());
+                    }
+                }
+              
+                uniqueList = result.Distinct().ToList();
+            }
+            return uniqueList;
         }
 
         public static List<string> ParquetDataReader(string filename)

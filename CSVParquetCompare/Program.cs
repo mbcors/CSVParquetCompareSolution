@@ -15,7 +15,9 @@ namespace CSVParquetCompare
         {
             //Compare.CsvParquet("Zonefiles");
             //Compare.CsvParquet("WhoisXML");
-            Compare.CsvParquet("Domenius");
+            //Compare.CsvParquet("Domenius");
+            //Compare.CsvParquet("Afnic");
+            Compare.CsvParquetIcann("ICANN");
         }
     }
 }
